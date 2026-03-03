@@ -1,4 +1,4 @@
-const BASE = "/api"; // proxied to Flask via vite.config.js
+const BASE = import.meta.env.VITE_API_URL;
 
 //  Debate 
 
