@@ -1,0 +1,107 @@
+/*  Reset & Base  */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Colors - Terminal Black & Green */
+  --bg:          #000000;
+  --bg-2:        #0a0a0a;
+  --bg-3:        #111111;
+  --border:      #1a3d1a;
+  --border-2:    #2d5a2d;
+  --text:        #33ff33;
+  --text-dim:    #1a9a1a;
+  --text-dimmer: #0d4d0d;
+  --amber:       #00ff66;
+  --amber-dim:   rgba(0,255,102,0.12);
+  --amber-glow:  rgba(0,255,102,0.3);
+  --red:         #ff3333;
+  --red-dim:     rgba(255,51,51,0.12);
+  --green:       #00ff66;
+  --green-dim:   rgba(0,255,102,0.12);
+  --blue:        #00ccff;
+
+  /* Typography */
+  --font-display: 'IBM Plex Mono', monospace;
+  --font-mono:    'IBM Plex Mono', monospace;
+  --font-body:    'IBM Plex Mono', monospace;
+
+  /* Spacing */
+  --radius:    4px;
+  --radius-lg: 8px;
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scanline texture overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,255,102,0.02) 2px,
+    rgba(0,255,102,0.02) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 2px; }
+
+/* Utilities */
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+input, textarea { font-family: inherit; }
+a { color: inherit; text-decoration: none; }
+
+/*  Animations  */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes meterShift {
+  from { width: var(--from); }
+  to   { width: var(--to); }
+}
+@keyframes momentPop {
+  0%   { opacity: 0; transform: translateY(20px) scale(0.95); }
+  15%  { opacity: 1; transform: translateY(0) scale(1); }
+  80%  { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-10px) scale(0.98); }
+}
+@keyframes onAirPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,255,102,0.4); }
+  50%       { box-shadow: 0 0 0 6px rgba(0,255,102,0); }
+}
+@keyframes waveform {
+  0%, 100% { transform: scaleY(0.3); }
+  50%       { transform: scaleY(1); }
+}

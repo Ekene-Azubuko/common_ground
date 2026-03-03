@@ -1,0 +1,17 @@
+export const PRESET_TOPICS = [
+  { label: "AI will replace most human jobs within 20 years", score: 9 },
+  { label: "Social media does more harm than good", score: 8 },
+  { label: "Democracy is the worst system except for all the others", score: 7 },
+  { label: "Free will is an illusion", score: 9 },
+  { label: "Capitalism is the root cause of climate change", score: 10 },
+  { label: "iPhone vs Android — which should be your first phone", score: 5 },
+  { label: "Meat eating is ethically indefensible", score: 8 },
+  { label: "Cancel culture does more harm than good", score: 9 },
+  { label: "Space exploration is a waste of money", score: 7 },
+  { label: "Religion has been a net negative for humanity", score: 10 },
+  { label: "Universal Basic Income would destroy the economy", score: 8 },
+  { label: "Privacy is more important than national security", score: 8 },
+  { label: "Pineapple belongs on pizza", score: 3 },
+  { label: "Remote work is more productive than office work", score: 6 },
+  { label: "Humanity should prioritize Mars colonization over fixing Earth", score: 8 },
+];
