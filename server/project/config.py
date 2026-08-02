@@ -6,8 +6,8 @@ ELEVENLABS_API_KEY = os.getenv("ELEVENLABS_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 #  Models
-DEBATE_MODEL = "claude-sonnet-4-20250514"
-JUDGE_MODEL = "claude-sonnet-4-20250514"  # can swap to haiku for cost savings
+DEBATE_MODEL = "claude-haiku-4-5"
+JUDGE_MODEL = "claude-haiku-4-5"  # can swap to haiku for cost savings
 DEBATE_MAX_TOKENS = 1000
 JUDGE_MAX_TOKENS = 300  # judge responses are short structured JSON
 
